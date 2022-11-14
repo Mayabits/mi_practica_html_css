@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05 Form</title>
+  <link rel=" stylesheet" href="styles/reset_practica.css">
+  <link rel="stylesheet" href="styles/test_estilo_practica.css">
+</head>
+<body>
+    <!-- Barra de navegación con links a cada elemento del protfolio. Todos los links tendrán
+    que tener el estado hover suavizado con una transición. Estos links no son
+    necesarios en la versión mobile como viene en los anexos.
+    -->
+    <nav class="navbar">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Steven_Universo_%28Personagem%29.png" alt="Steven Universe">
+        <a class="link" href="#">Menu</a>
+      </nav>
+    <!-- etiqueta cabecera -->
+<header>
+    <!--imagen de fondo optimizada para distintas resoluciones-->
+    <h1>Steven Universe</h1>
+    <h2>We always save the day</h2>
+    <!--<img class="profile" src="https://www.looper.com/img/gallery/actors-we-want-to-see-in-a-live-action-steven-universe-reboot/intro-1668179872.webp" alt="Steven Universe">
+    --> 
+</header>
+  <!-- main -->
+  <main>
+    <section>
+        <p>Las Gemas de Cristal te ayudan si estás mal y no hay complicación que no tenga solución.
+            Por eso el mundo entero hoy confía en...
+            Granate, Amatista, Perla... ¡y Steven!</p>
+    </section>
+    <section>
+        <!--Una sección con nuestras skill de programación y progreso de las mismas. 
+        Esta sección tiene que contar con barras de progreso animadas con animaciones css-->
+      <article>
+        <h3>Mis skills</h3>
+        <p>Burbuja protectora</p>
+        <div class="w3-light-grey">
+        </div>
+        <p>Dinamoquinesis</p>
+        <div>
+        </div>
+        <p>Levitación</p>
+        <div>
+        </div>
+        <p>Telepatía onírica</p>
+        <div>
+        </div>
+        <div id="contenedor">
+            <div id="barra">
+              <div id="texto"></div>
+            </div>
+          </div>
+      </article>
+    </section>
+    <!--Formulario de contacto con estos inputs. Todos ellos tienen que tener tanto los tipos
+    correctos como la validación html de cada input. Nombre, apellidos, teléfono - requeridos-
+    -->
+    <form action="registro-completado.html" method="post">
+        <div>
+          <label for="name">Nombre:</label>
+          <input required id="name" name="name" type="text" placeholder="tu nombre">
+        </div>
+        <div>
+          <label for="surname">Apellidos:</label>
+          <input required id="surname" name="surname" type="text">
+        </div>
+        <div>
+          <label for="phone">Teléfono:</label>
+          <input required type="tel" id="phone" name="phone" pattern="[0-9]+">
+        </div>
+       
+        <!--Unos radio button para responder a la pregunta "¿como me conociste?"
+    requerido - Universidad - Keepcoding kick-off - Colegio - En Github-->
+        <fieldset>
+          <legend>¿Cómo me conociste?</legend>
+          
+          <label for="uni">Universidad</label>
+          <input required id="uni" type="radio" name="howWeMet" value="uni">
+    
+          <label for="KCkick-off">Keepcoding kick-off</label>
+          <input required id="KCkick-off" type="radio" name="howWeMet" value="KCkick-off">
+          
+          <label for="school">Colegio</label>
+          <input  required id="school" type="radio" name="howWeMet" value="school">
+
+          <label for="github">En Github</label>
+          <input  required id="github" type="radio" name="howWeMet" value="github">
+        </fieldset>
+         <!--Tag de github (usar regexp para la validación -@username)-->
+        <input type="submit" value="Enviar">
+         <!--Descripción (máx 180 caracteres (-requerido))
+        y botón de guardado-->
+        <label for="description">Descripción</label>
+        <textarea required id="description"></textarea>
+      </form>
+  </main>
+  <!-- Footer con links a nuestras redes sociales - Importante tener en cuenta que son links 
+    a un recurso externo y no queremos dejar información nuestra en esas webs -->
+  <footer>
+    <a href="Facebook">Facebook_link</a>
+    <a href="Twitter">Twitter_link</a>
+    <a href="Instagram">Instagram_link</a>
+  </footer>
+</body>
+</html>
