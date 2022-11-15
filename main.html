@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>05 Form</title>
   <link rel=" stylesheet" href="styles/reset_practica.css">
-  <link rel="stylesheet" href="styles/test_estilo_practica.css">
+  <link rel="stylesheet" href="styles/estilo_practica.css">
 </head>
 <body>
     <!-- Barra de navegación con links a cada elemento del protfolio. Todos los links tendrán
@@ -21,39 +21,43 @@
 <header>
     <!--imagen de fondo optimizada para distintas resoluciones-->
     <h1>Steven Universe</h1>
-    <h2>We always save the day</h2>
-    <!--<img class="profile" src="https://www.looper.com/img/gallery/actors-we-want-to-see-in-a-live-action-steven-universe-reboot/intro-1668179872.webp" alt="Steven Universe">
-    --> 
 </header>
   <!-- main -->
   <main>
-    <section>
-        <p>Las Gemas de Cristal te ayudan si estás mal y no hay complicación que no tenga solución.
-            Por eso el mundo entero hoy confía en...
+    <section class="intro">
+        <p>Las Gemas de Cristal te ayudan si estás mal y no hay complicación que no tenga solución.<br>
+            Por eso el mundo entero hoy confía en...<br>
             Granate, Amatista, Perla... ¡y Steven!</p>
     </section>
     <section>
         <!--Una sección con nuestras skill de programación y progreso de las mismas. 
         Esta sección tiene que contar con barras de progreso animadas con animaciones css-->
       <article>
-        <h3>Mis skills</h3>
+        <h2>Mis skills</h2>
         <p>Burbuja protectora</p>
-        <div class="w3-light-grey">
+        <div class="progress">
+          <div class="progress-bar" style="width:95%;">
+            <span class="progress-bar-text">95%</span>
+          </div>
         </div>
         <p>Dinamoquinesis</p>
-        <div>
+        <div class="progress">
+          <div class="progress-bar" style="width:75%;">
+            <span class="progress-bar-text">75%</span>
+          </div>
         </div>
         <p>Levitación</p>
-        <div>
+        <div class="progress">
+          <div class="progress-bar" style="width:65%;">
+            <span class="progress-bar-text">65%</span>
+          </div>
         </div>
         <p>Telepatía onírica</p>
-        <div>
-        </div>
-        <div id="contenedor">
-            <div id="barra">
-              <div id="texto"></div>
-            </div>
+        <div class="progress">
+          <div class="progress-bar" style="width:85%;">
+            <span class="progress-bar-text">85%</span>
           </div>
+        </div>
       </article>
     </section>
     <!--Formulario de contacto con estos inputs. Todos ellos tienen que tener tanto los tipos
