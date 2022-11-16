@@ -13,26 +13,39 @@
     que tener el estado hover suavizado con una transición. Estos links no son
     necesarios en la versión mobile como viene en los anexos.
     -->
-    <nav class="navbar">
-        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Steven_Universo_%28Personagem%29.png" alt="Steven Universe">
-        <a class="link" href="#">Menu</a>
+    <div>
+      <nav class="navbar">
+         <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Steven_Universo_%28Personagem%29.png" alt="Steven Universe">
+         <div class="dropdown">
+          <button class="dropbtn">Menu</button>
+          <div class="dropdown-content">
+          <a href="#intro">Intro</a>
+          <a href="#skills">Skills</a>
+          <a href="#contacto">Contacto</a>
+          </div>
+        </div>
       </nav>
-    <!-- etiqueta cabecera -->
+    </div>
+
 <header>
     <!--imagen de fondo optimizada para distintas resoluciones-->
-    <h1>Steven Universe</h1>
+
 </header>
-  <!-- main -->
+
   <main>
-    <section class="intro">
+    <!--Intro del portfolio -->
+    <section class="intro" id="intro">
+      <h1 class="Steven">Steven Universe</h1>
         <p>Las Gemas de Cristal te ayudan si estás mal y no hay complicación que no tenga solución.<br>
             Por eso el mundo entero hoy confía en...<br>
             Granate, Amatista, Perla... ¡y Steven!</p>
     </section>
-    <section>
+
+    <!--Skills de Steven Universe -->
+    <section id="skills">
         <!--Una sección con nuestras skill de programación y progreso de las mismas. 
         Esta sección tiene que contar con barras de progreso animadas con animaciones css-->
-      <article>
+      <article class="skills-article">
         <h2>Mis skills</h2>
         <p>Burbuja protectora</p>
         <div class="progress">
@@ -60,25 +73,27 @@
         </div>
       </article>
     </section>
+
     <!--Formulario de contacto con estos inputs. Todos ellos tienen que tener tanto los tipos
     correctos como la validación html de cada input. Nombre, apellidos, teléfono - requeridos-
     -->
-    <form action="registro-completado.html" method="post">
+    <!--Formulario de contacto -->
+    <form action="registro-completado.html" method="post" id="contacto">
         <div>
           <label for="name">Nombre:</label>
-          <input required id="name" name="name" type="text" placeholder="tu nombre">
+          <input required id="name" name="name" type="text" placeholder="Dime tu nombre">
         </div>
         <div>
           <label for="surname">Apellidos:</label>
-          <input required id="surname" name="surname" type="text">
+          <input required id="surname" name="surname" type="text" placeholder="Y tus apellidos">
         </div>
         <div>
           <label for="phone">Teléfono:</label>
-          <input required type="tel" id="phone" name="phone" pattern="[0-9]+">
+          <input required type="tel" id="phone" name="phone" pattern="[0-9]+" placeholder="000 000 000">
         </div>
        
         <!--Unos radio button para responder a la pregunta "¿como me conociste?"
-    requerido - Universidad - Keepcoding kick-off - Colegio - En Github-->
+    requerido -->
         <fieldset>
           <legend>¿Cómo me conociste?</legend>
           
@@ -93,17 +108,20 @@
 
           <label for="github">En Github</label>
           <input  required id="github" type="radio" name="howWeMet" value="github">
+          
         </fieldset>
-         <!--Tag de github (usar regexp para la validación -@username)-->
-        <input type="submit" value="Enviar">
+  
          <!--Descripción (máx 180 caracteres (-requerido))
         y botón de guardado-->
-        <label for="description">Descripción</label>
-        <textarea required id="description"></textarea>
+       
+        <label class="mensajito" for="message">Mensajito: </label>
+                    <textArea id="message" name="message" maxlength="180" placeholder="Déjame un mensajito aquí. (máx 180 caracteres)"></textarea>
+
+        <input class="submit-button" type="submit" value="Enviar">        
+
       </form>
   </main>
-  <!-- Footer con links a nuestras redes sociales - Importante tener en cuenta que son links 
-    a un recurso externo y no queremos dejar información nuestra en esas webs -->
+  <!-- Footer con links a nuestras redes sociales -->
   <footer>
     <a href="Facebook">Facebook_link</a>
     <a href="Twitter">Twitter_link</a>
